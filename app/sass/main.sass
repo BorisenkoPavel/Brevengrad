@@ -34,25 +34,36 @@ b, strong
 	font-weight: bold
 a:hover
 	text-decoration: none
+	color: #fff
+h1, h2, h3
+	font-family: robotoSlab
+	color: $accent
+	text-transform: uppercase
+h2 
+	font-size: 18px
+h3 
+	font-size: 14px
 
 header
-	height: 405px
 	.header-top
 		width: 100%
 		height: 50px
 		background-color: #000
-		padding: 5px 0
+		padding: 8px 10px
 	.logo
 		display: inline-block
-		color: $accent
-		font-size: 15px
 		img
 			margin-right: 5px
+		a
+			color: $accent
+			font-size: 15px
+			font-family: RobotoSlab
+			text-transform: uppercase
 	.wrap-phone
 		text-align: right
 		.phone
 			display: inline-block
-			
+			font-family: RobotoSlab
 			a
 				height: 30px
 				color: #fff
@@ -73,29 +84,390 @@ header
 					background-repeat: no-repeat
 					vertical-align: bottom
 					border-radius: 2px 0 0 2px
+
 	nav
-		.main 
+		font-family: RobotoSlab
+		position: absolute
+		right: 0
+		top: 10px
+		z-index: 5
+		span
 			background-color: $active
-			color: #fff
 			display: inline-block
+			margin-right: 10px
+			.nav-main 
+				padding: 8px 20px
+				color: #fff
+				display: inline-block
 		ul
 			padding: 0
 			display: inline-block
-			
 			li
-				padding: 0
-				margin: 0
 				display: inline-block
-				background-color: $accent
-				a 
-					padding: 0
-					margin: 0
-					color: #fff
+				position: relative
+				a 	
 					background-color: $accent
+					padding: 8px 15px
+					display: inline-block
+					color: #fff
+					&:hover
+						background-color: $active
+					
+				
+				&:last-child a
+					padding-right: 40px
+				&:first-child a
+					margin-right: 40px 
+					border-radius: 3px 3px 3px 0px 
+					position: relative
+					&:after
+						content: ""
+						position: absolute
+						width: 20px
+						height: 39px
+						top: 0
+						right: -10px
+						border-radius: 0 3px 3px 0
+						-webkit-transform: skew(-20deg)
+						-moz-transform: skew(-20deg)
+						-o-transform: skew(-20deg)
+						background-color: $accent
+					&:before
+						content: ""
+						position: absolute
+						width: 20px
+						height: 39px
+						top: 0
+						left: -10px
+						border-radius: 3px 0 0 3px
+						-webkit-transform: skew(-20deg)
+						-moz-transform: skew(-20deg)
+						-o-transform: skew(-20deg)
+						background-color: $accent
+				&:first-child a:hover:after
+					background-color: $active
+				&:first-child a:hover:before
+					background-color: $active
+				&:nth-child(2) a
+					position: relative
+					&:before	
+						content: ""
+						position: absolute
+						width: 20px
+						height: 39px
+						top: 0
+						left: -10px
+						border-radius: 3px 0 0 3px
+						-webkit-transform: skew(-20deg)
+						-moz-transform: skew(-20deg)
+						-o-transform: skew(-20deg)
+						background-color: $accent
+				&:nth-child(2) a:hover:before
+					background-color: $active
 
+					
+					
+	.header-content
+		position: relative
 	
+.main
+	padding: 10px
+	.advantage
+		.advantage-item
+			height: 160px
+			padding: 0	6px
+			background-color: #e8e8e8
+			margin-bottom: 5px
+			.advantage-logo
+				width: 55px
+				height: 55px
+				margin: auto
+				background-image: url(../img/sprite2.png)
+				background-repeat: no-repeat
+				background-position: -11px 10px
+			p 
+				text-align: center
+				margin: auto
+				margin-top: 10px
+				line-height: 17px
+		.col
+			&:nth-child(2) 
+				.advantage-item
+					.advantage-logo
+						background-position: -200px 10px
+			&:nth-child(3) 
+				.advantage-item
+					.advantage-logo
+						background-position: -389px 10px
+			&:nth-child(4) 
+				.advantage-item
+					.advantage-logo
+						background-position: -575px 10px
 
+.about-us
+	padding-top: 15px
 
+.services
+	.accent-item
+		display: inline-block
+		color: #fff
+		background-color: $accent
+		padding: 10px 10px 10px 30px
+		position: relative
+		font-family: robotoSlab
+		text-transform: uppercase
+		&:after
+			content: ""
+			position: absolute
+			width: 20px
+			height: 43px
+			top: 0
+			right: -10px
+			border-radius: 0 3px 3px 0
+			-webkit-transform: skew(20deg)
+			-moz-transform: skew(20deg)
+			-o-transform: skew(20deg)
+			background-color: $accent
+			z-index: -1
+	.services-items
+		padding: 10px
+		.services-item
+			height: 140px
+			padding: 0	6px
+			background-color: #e8e8e8
+			margin-bottom: 5px
+			padding-top: 10px
+			.services-logo
+				width: 55px
+				height: 55px
+				margin: auto
+				background-image: url(../img/sprite2.png)
+				background-repeat: no-repeat
+				background-position: 7px -65px
+			p 
+				text-align: center
+				margin: auto
+				margin-top: 10px
+				line-height: 17px
+		.col
+			&:nth-child(2) 
+				.services-item
+					.services-logo
+						background-position: -145px -65px
+			&:nth-child(3) 
+				.services-item
+					.services-logo
+						background-position: -293px -65px
+			&:nth-child(4) 
+				.services-item
+					.services-logo
+						background-position: -446px -65px
+			&:nth-child(5) 
+				.services-item
+					.services-logo
+						background-position: -595px -65px
+	.services-content
+		padding: 10px
+		p 
+			span
+				color: $accent
+	.catalog-item
+		height: 255px
+		margin-bottom: 5px
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		position: relative
+		.item-price
+			background-color: rgba(0, 0, 0, .5)
+			color: #fff
+			text-align: right
+			position: absolute
+			bottom: 0
+			width: 100%
+			text-align: left
+			.price-name
+				padding: 5px
+				text-transform: uppercase
+				font-size: 20px
+				line-height: 1.1
+				po
+			.price
+				white-space: nowrap
+				background-color: $accent
+				display: block
+				position: absolute
+				right: 0
+				top: 0
+				bottom: 0
+				left: 0
+	/*	.catalog-item-name	
+			color: #fff
+			background-color: rgba(0, 0, 0, .5)
+			position: absolute
+			width: 100%
+			font-size: 20px
+			font-family: robotoslab
+			left: 0
+			bottom: 0
+			margin: 0
+			text-align: left
+			display: block
+			padding: 3px 0
+		.price
+			display: inline-block
+			position: absolute
+			color: #fff
+			background-color: $accent
+			padding: 3px 0
+			position: absolute
+			font-family: robotoSlab
+			font-size: 14px
+			line-height: 1.65
+			bottom: 0
+			right: 0
+			margin: auto
+			&:before
+				content: ""
+				position: absolute
+				width: 20px
+				height: 20px
+				top: 0
+				left: -10px
+				border-radius: 0 3px 3px 0
+				-webkit-transform: skew(-20deg)
+				-moz-transform: skew(-20deg)
+				-o-transform: skew(-20deg)
+				background-color: $accent
 
+			span 
+				font-size: 18px
+				color: #fff */
+.project
+	.accent-project
+		text-transform: uppercase
+		display: inline-block
+		color: #fff
+		background-color: $accent
+		padding: 10px 10px 10px 30px
+		position: relative
+		font-family: robotoSlab
+		margin: 5px 0
+		&:after
+			content: ""
+			position: absolute
+			width: 20px
+			height: 43px
+			top: 0
+			right: -12px
+			border-radius: 0 3px 3px 0
+			-webkit-transform: skew(20deg)
+			-moz-transform: skew(20deg)
+			-o-transform: skew(20deg)
+			background-color: $accent
+			z-index: -1
+	.project-content
+		padding: 10px
 
+		.owl-nav
+			.owl-prev, .owl-next
+				position: absolute
+				width: 50px
+				height: 50px
+				top: 45%
+				outline: none
+				span
+					position: absolute
+					width: 50px
+					height: 50px
+					background-color: rgba(0,0,0, .5)
+					border-radius: 50%
+					font-size: 50px
+					color: #fff
+					display: inline-block
+					top: 0
+					line-height: 40px
+					left: 0
+			.owl-prev
+				left: -25px
+			.owl-next
+				right: -25px
+
+footer
+	.contacts-bg
+		background-image: url(../img/photo1.jpg)
+		background-position: center center
+		background-size: cover
+		background-repeat: no-repeat
+		.contacts
+			padding: 10px 0 20px
+			background-color: rgba(0,0,0, .5)
+			color: #fff
+			min-height: 125px
+			line-height: 2.5
+			img
+				position: absolute
+				bottom: 0
+				top: 0
+				right: 0
+				margin: auto
+			.contacts-item
+				margin-left: 15px
+				position: relative
+				padding-left: 25px
+				&:before
+					content: ""
+					position: absolute
+					width: 20px
+					height: 40px
+					background-image: url(../img/sprite.png)
+					background-repeat: no-repeat
+					background-position: 0 -20px
+					left: 0
+			.barnaul, .peterburg
+				&:before
+					background-position: 0 -49px
+	.footer-copyright
+		background-color: $active
+		p	
+			padding-left: 10px
+			font-size: 12px
+			font-style: italic
+			color: #fff
+			border-bottom: 1px solid #c55b2c
+			line-height: 25px
+			margin: 0
+		.aestudio
+			color: #fff
+			padding-left: 10px
+			line-height: 30px
+			a
+				font-style: italic
+				color: #fff
+			span
+				text-decoration: underline
+		img
+				margin-left: 5px
+	.full
+		background-color: #000
+		line-height: 40px
+		text-decoration: underline
+		padding-left: 10px
+		color: #fff
+		a
+			display: inline-block
+			padding-left: 33px
+			text-decoration: underline
+			color: #fff
+			position: relative
+			&:before
+				content: ""
+				width: 23px
+				height: 20px
+				background-image: url(../img/full-icon.png)
+				position: absolute
+				left: 0
+				top: 0
+				bottom: 0
+				margin: auto
 @import "media" // Always at the end
