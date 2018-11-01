@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>OptimizedHTML 4</title>
+	<title>Brevengrad</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,25 +44,23 @@
 		</div>
 		<div class="header-content">
 			<nav>
-				<div class="container">
-					<div class="row ">
-						<div class="col">
+
 							<ul>
-								<li><a href="" class="nav-main active">Галерея</a>
+								<li><a href="#" class="nav-main active">Галерея</a>
 								<li><a href="#">О компании</a>
 								<li><a href="#">Статьи</a>
 								<li><a href="#">Услуги</a>
 								<li><a href="#">Индивидуальный проект</a>
 								<li><a href="#">Контакты</a>
 							</ul>
-						</div>
-					</div>
-				</div>
 			</nav>
-			<div class="">
-				<div class="photo-item"><img src="img/photo.jpg" alt="photo"></div>
-
+			<div class="fotorama" data-width="100%" data-maxheight="405" data-nav="thumbs" data-autoplay="3000" >
+				<a href="img/photo.jpg"><img src="img/photo.jpg"></a>
+				<a href="img/photo1.jpg"><img src="img/photo1.jpg"></a>
+				<img src="img/photo2.jpg" alt="photo" >
+				<img src="img/photo3.jpg" alt="photo" >
 			</div>
+			<div class="fotorama-bottom"><span>Здравствуйте!</span><br> Мы рады приветствовать вас на сайте<br> нашей строительной компании.</div>
 		</div>
 	</header>
 	<section class="main">
@@ -108,7 +106,7 @@
 		</div>
 	</section>
 	<section class="services">
-		<div class="accent-item">Услуги</div>
+		<a href="#" class="accent-item">Услуги</a>
 		<div class="services-items">
 			<div class="container">
 				<div class="row">
@@ -150,33 +148,49 @@
 		<p>В компании трудятся лучшие мастера по строительству и отделке, поэтому мы уверены, что дома, построенные компанией Брёвенград, будут качественными, надежными и красивыми для <span> Вас и ваших близких.</span></p>
 		<div class="container">
 				<div class="row">
-					<div class="col-6">
-						<div class="catalog-item" style="background-image: url(img/photo3.jpg)">
+					<div class="col-12 col-sm-6">
+						<a class="catalog-item" href="#" style="background-image: url(img/photo3.jpg)">
+							<div class="item-price">
+								<span class="price-name">Ручная рубка</span>
+								<span class="price">от 150 т.р.</span>
+							</div>
+							</a>
+						
+					</div>
+					<div class="col-12 col-sm-6">
+						<a class="catalog-item" href="#" style="background-image: url(img/photo1.jpg)">
+							<div class="item-price">
+								<span class="price-name">Клееный брус</span>
+								<span class="price">от 150 т.р.</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-12 col-sm-6">
+						<a class="catalog-item" href="#" style="background-image: url(img/photo4.jpg)">
+							<div class="item-price">
+								<span class="price-name">Фахверковые
+									конструкции</span>
+								<span class="price">от 150 т.р.</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-12 col-sm-6">
+						<a class="catalog-item" href="#" style="background-image: url(img/photo2.jpg)">
 							<div class="item-price">
 								<span class="price-name">Оцилндрованое бревно</span>
 								<span class="price">от 150 т.р.</span>
 							</div>
-							</div>
-					</div>
-					<div class="col-6">
-						<div class="catalog-item" style="background-image: url(img/photo1.jpg)"><p>Ручная рубка</p><span class="price">от 150 т.р.</span></div>
-					</div>
-					<div class="col-6">
-						<div class="catalog-item" style="background-image: url(img/photo4.jpg)"><p>Ручная рубка</p><span class="price">от 150 т.р.</span></div>
-					</div>
-					<div class="col-6">
-						<div class="catalog-item" style="background-image: url(img/photo2.jpg)"><p>Ручная рубка</p><span class="price">от 150 т.р.</span></div>
+						</a>
 					</div>
 				</div>
 			</div>
 	</div>
-	
 	</section>
 	<section class="project">
-		<div class="accent-project">Индивидуальный проект</div>
+		<a href="#" class="accent-project">Индивидуальный проект</a>
 		<div class="project-content">
 			<div class="project-carousel owl-carousel">
-			<img src="img/project-photo.jpg" alt="project">
+			<img src="img/project-photo.jpg" alt="project" >
 			<img src="img/project-photo1.jpg" alt="project">
 			<img src="img/project-photo2.jpg" alt="project">
 			<img src="img/project-photo3.jpg" alt="project">
@@ -188,13 +202,13 @@
 		<div class="contacts">	
 			<div class="container">
 				<div class="row">
-					<div class="col-1"><a href=""><img src="img/footer-logo.png" alt="logo"></a> </div>
-					<div class="col-5">
+					<div class="col-12 col-sm-1"><p>Бревенград</p><a href="#"><img src="img/footer-logo.png" alt="logo"></a> </div>
+					<div class="col-12 col-sm-5">
 						<div class="barnaul contacts-item">г.Барнаул, пр. Ленина, 54в, офис 403</div>
 						<div class="phone2 contacts-item">+7 3852 539-606</div>
 						<div class="phone contacts-item">+7 962-819-01-01</div>
 					</div>
-					<div class="col-6">
+					<div class="col-12 col-sm-6">
 						<div class="peterburg contacts-item">г. Санкт-Петербург, Выборгское шоссе 212, уч. 34а</div>
 						<div class="phone3 contacts-item">+7  812  389-48-98 </div>
 					</div>

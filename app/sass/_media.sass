@@ -8,13 +8,55 @@
 
 // ≥992px
 +media-breakpoint-down(md)
-
+   header nav ul li a
+        font-size: 13px
 // ≥768px
 +media-breakpoint-down(sm)
-
+    .fotorama-bottom
+        font-size: 13px
+    header nav ul li a
+        font-size: 10px
+        padding: 5px 11px
 // ≥576px
 +media-breakpoint-down(xs)
+    header nav 
+        position: relative
+        top: 0
+        ul
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
+            margin: 0
+        border-bottom: 2px solid #e2eff5
+    header nav ul li a
+        &:first-child
+            margin: 0
+        &:last-child
+            padding: 3px 7px
+        background-color: #e2eff5
+        color: #000
+        font-size: 14px
+        padding: 3px 10px
+        white-space: nowrap
+    header nav ul li
+        margin-right: 5px   
+        margin-top: 5px
+        margin-bottom: 5px
+    header nav ul li:first-child a:before, header nav ul li:first-child a:after, header nav ul li:nth-child(2) a:before
+        display: none
 
+    footer .contacts-bg .contacts img
+        position: relative
+        left: 0
+        top: 0
+        margin: auto
+        display: block
+    footer .contacts-bg .contacts p 
+        display: block
+    .fotorama__wrap--css3 .fotorama__nav__shaft
+        opacity: 0
+
+ 
 
 /*==========  Mobile First  ==========*/
 

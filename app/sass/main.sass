@@ -35,6 +35,7 @@ b, strong
 a:hover
 	text-decoration: none
 	color: #fff
+	
 h1, h2, h3
 	font-family: robotoSlab
 	color: $accent
@@ -91,6 +92,8 @@ header
 		right: 0
 		top: 10px
 		z-index: 5
+		
+					
 		span
 			background-color: $active
 			display: inline-block
@@ -110,9 +113,10 @@ header
 					padding: 8px 15px
 					display: inline-block
 					color: #fff
+					transition: .3s ease
 					&:hover
 						background-color: $active
-					
+						transition: .3s ease
 				
 				&:last-child a
 					padding-right: 40px
@@ -124,7 +128,7 @@ header
 						content: ""
 						position: absolute
 						width: 20px
-						height: 39px
+						height: 100%
 						top: 0
 						right: -10px
 						border-radius: 0 3px 3px 0
@@ -132,11 +136,12 @@ header
 						-moz-transform: skew(-20deg)
 						-o-transform: skew(-20deg)
 						background-color: $accent
+						transition: .3s ease
 					&:before
 						content: ""
 						position: absolute
 						width: 20px
-						height: 39px
+						height: 100%
 						top: 0
 						left: -10px
 						border-radius: 3px 0 0 3px
@@ -144,17 +149,20 @@ header
 						-moz-transform: skew(-20deg)
 						-o-transform: skew(-20deg)
 						background-color: $accent
+						transition: .3s ease
 				&:first-child a:hover:after
 					background-color: $active
+					transition: .3s ease
 				&:first-child a:hover:before
 					background-color: $active
+					transition: .3s ease
 				&:nth-child(2) a
 					position: relative
 					&:before	
 						content: ""
 						position: absolute
 						width: 20px
-						height: 39px
+						height: 100%
 						top: 0
 						left: -10px
 						border-radius: 3px 0 0 3px
@@ -162,14 +170,55 @@ header
 						-moz-transform: skew(-20deg)
 						-o-transform: skew(-20deg)
 						background-color: $accent
+						transition: .3s ease
 				&:nth-child(2) a:hover:before
 					background-color: $active
-
+					transition: .3s ease
+		ul
+			li
+				a.active
+					background-color: $active
+					&:after
+						background-color: $active
+					&:before
+						background-color: $active
 					
 					
 	.header-content
 		position: relative
-	
+	.fotorama 
+		position: relative
+		img 
+			height: 100%
+			width: 100%
+		.fotorama__nav-wrap
+			position: absolute
+			bottom: 0
+			right: 0
+			padding: 10px
+			z-index: 20
+			background-color: rgba(0,0,0, .5)
+			.fotorama__thumb-border
+				border-color: rgba(249,132,18, .4)
+				background-color: rgba(249,132,18, .4)
+		.fotorama__wrap--css3 .fotorama__nav__shaft, .fotorama__wrap--css3 .fotorama__stage__shaft, .fotorama__wrap--css3 .fotorama__thumb-border
+			float: right
+
+	.fotorama-bottom
+		position: absolute
+		bottom: 0
+		height: 100px
+		width: 100%
+		color: $accent
+		text-transform: uppercase
+		font-family: robotoslab
+		padding-left: 10px
+		padding-top: 20px
+		pointer-events: none
+		span
+			color: #ffffff
+
+
 .main
 	padding: 10px
 	.advantage
@@ -220,7 +269,7 @@ header
 			content: ""
 			position: absolute
 			width: 20px
-			height: 43px
+			height: 100%
 			top: 0
 			right: -10px
 			border-radius: 0 3px 3px 0
@@ -271,78 +320,61 @@ header
 		p 
 			span
 				color: $accent
-	.catalog-item
-		height: 255px
-		margin-bottom: 5px
-		background-position: center
-		background-size: cover
-		background-repeat: no-repeat
-		position: relative
-		.item-price
-			background-color: rgba(0, 0, 0, .5)
-			color: #fff
-			text-align: right
-			position: absolute
-			bottom: 0
-			width: 100%
-			text-align: left
-			.price-name
-				padding: 5px
-				text-transform: uppercase
-				font-size: 20px
-				line-height: 1.1
-				po
-			.price
-				white-space: nowrap
-				background-color: $accent
-				display: block
-				position: absolute
-				right: 0
-				top: 0
-				bottom: 0
-				left: 0
-	/*	.catalog-item-name	
-			color: #fff
-			background-color: rgba(0, 0, 0, .5)
-			position: absolute
-			width: 100%
-			font-size: 20px
-			font-family: robotoslab
-			left: 0
-			bottom: 0
-			margin: 0
-			text-align: left
-			display: block
-			padding: 3px 0
+.catalog-item
+	height: 255px
+	margin-bottom: 5px
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+	display: block
+	&:before
+		content: ""
+		width: 100%
+		height: 100%
+		position: absolute
+		background-color: rgba(0,0,0, .4)
+		opacity: 0
+		transition: .3s ease
+	&:hover:before
+		opacity: 1
+		transition: .3s ease
+	&:hover .item-price
+		background-color: $active
+		transition: .3s ease
+
+
+	.item-price
+		background-color: rgba(0, 0, 0, .5)
+		color: #fff
+		bottom: 0
+		width: 100%
+		display: flex
+		justify-content: space-between
+		position: absolute
+		align-items: center
+		.price-name
+			padding: 5px
+			text-transform: uppercase
+			font-size: 18px
+			line-height: 1.1
 		.price
-			display: inline-block
-			position: absolute
-			color: #fff
+			white-space: nowrap
 			background-color: $accent
-			padding: 3px 0
-			position: absolute
-			font-family: robotoSlab
-			font-size: 14px
-			line-height: 1.65
-			bottom: 0
-			right: 0
-			margin: auto
+			position: relative
+			padding-left: 10px
 			&:before
 				content: ""
 				position: absolute
 				width: 20px
-				height: 20px
+				height: 100%
 				top: 0
 				left: -10px
-				border-radius: 0 3px 3px 0
+				border-radius: 3px 0 0 3px 
 				-webkit-transform: skew(-20deg)
 				-moz-transform: skew(-20deg)
 				-o-transform: skew(-20deg)
 				background-color: $accent
-
-			span 
-				font-size: 18px
-				color: #fff */
 .project
 	.accent-project
 		text-transform: uppercase
@@ -357,7 +389,7 @@ header
 			content: ""
 			position: absolute
 			width: 20px
-			height: 43px
+			height: 100%
 			top: 0
 			right: -12px
 			border-radius: 0 3px 3px 0
@@ -372,26 +404,26 @@ header
 		.owl-nav
 			.owl-prev, .owl-next
 				position: absolute
-				width: 50px
-				height: 50px
+				width: 40px
+				height: 40px
 				top: 45%
 				outline: none
 				span
 					position: absolute
-					width: 50px
-					height: 50px
+					width: 40px
+					height: 40px
 					background-color: rgba(0,0,0, .5)
 					border-radius: 50%
-					font-size: 50px
+					font-size: 30px
 					color: #fff
 					display: inline-block
 					top: 0
-					line-height: 40px
+					line-height: 35px
 					left: 0
 			.owl-prev
-				left: -25px
+				left: 0px
 			.owl-next
-				right: -25px
+				right: 0px
 
 footer
 	.contacts-bg
@@ -405,6 +437,13 @@ footer
 			color: #fff
 			min-height: 125px
 			line-height: 2.5
+			p 
+				font-family: robotoslab
+				color: $accent
+				font-size: 14px
+				text-align: center
+				margin: 0
+				display: none
 			img
 				position: absolute
 				bottom: 0
@@ -470,4 +509,75 @@ footer
 				top: 0
 				bottom: 0
 				margin: auto
+
+.page 
+	header nav 
+		position: relative
+		text-align: right
+
+	.breadcrumb
+		font-size: 14px
+		font-family: robotoslablight
+		padding: 0.75rem 0
+		background-color: #fff
+		color: #000
+		a 
+			text-decoration: underline
+			&:hover
+				color: $accent
+	.services-content
+		padding: 5px
+		margin-bottom: 10px
+	.project-size
+		font-family: robotoslab
+		font-size: 20px
+	.project-price
+		font-family: robotoslab
+		font-size: 40px
+		color: $accent
+	.date-accent
+		text-transform: uppercase
+		display: inline-block
+		color: #fff
+		background-color: $accent
+		padding: 3px 5px 3px 15px
+		position: relative
+		font-family: robotoSlab
+		margin: 5px 0
+		margin-left: -5px
+		&:after
+			content: ""
+			position: absolute
+			width: 20px
+			height: 100%
+			top: 0
+			right: -12px
+			border-radius: 0 3px 3px 0
+			-webkit-transform: skew(20deg)
+			-moz-transform: skew(20deg)
+			-o-transform: skew(20deg)
+			background-color: $accent
+			z-index: -1
+	.news-item
+		margin-top: 10px
+		border-bottom: 2px solid #e5e5e5
+		h2
+			margin-top: 10px
+			text-transform: none
+	.page-nav
+		margin-top: 25px
+		.pagination
+			justify-content: center
+			li 
+				margin-right: 5px
+			a 
+				color: #000
+				border-radius: 50%
+				padding: .15rem .40rem
+				background-color: #c5e0eb
+				border: none
+			.active-page
+				background-color: #fcc188
+	h2
+		margin: 0
 @import "media" // Always at the end
