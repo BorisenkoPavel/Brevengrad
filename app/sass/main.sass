@@ -44,6 +44,16 @@ h2
 	font-size: 18px
 h3 
 	font-size: 14px
+.button
+	background-color: $accent
+	display: inline-block
+	padding: .5rem 1.45rem
+	border-radius: 5px
+	color: #fff
+	box-shadow: 0 0 10px rgba(0,0,0,0.5)
+	font-family: robotoslab
+	&:active
+		transform: scale(0.95)
 
 header
 	.header-top
@@ -92,6 +102,7 @@ header
 		right: 0
 		top: 10px
 		z-index: 5
+		max-width: 770px
 		
 					
 		span
@@ -221,37 +232,37 @@ header
 
 .main
 	padding: 10px
-	.advantage
-		.advantage-item
-			height: 160px
-			padding: 0	6px
-			background-color: #e8e8e8
-			margin-bottom: 5px
-			.advantage-logo
-				width: 55px
-				height: 55px
-				margin: auto
-				background-image: url(../img/sprite2.png)
-				background-repeat: no-repeat
-				background-position: -11px 10px
-			p 
-				text-align: center
-				margin: auto
-				margin-top: 10px
-				line-height: 17px
-		.col
-			&:nth-child(2) 
-				.advantage-item
-					.advantage-logo
-						background-position: -200px 10px
-			&:nth-child(3) 
-				.advantage-item
-					.advantage-logo
-						background-position: -389px 10px
-			&:nth-child(4) 
-				.advantage-item
-					.advantage-logo
-						background-position: -575px 10px
+.advantage
+	.advantage-item
+		height: 160px
+		padding: 0	6px
+		background-color: #e8e8e8
+		margin-bottom: 5px
+		.advantage-logo
+			width: 55px
+			height: 55px
+			margin: auto
+			background-image: url(../img/sprite2.png)
+			background-repeat: no-repeat
+			background-position: -11px 10px
+		p 
+			text-align: center
+			margin: auto
+			margin-top: 10px
+			line-height: 17px
+	.col
+		&:nth-child(2) 
+			.advantage-item
+				.advantage-logo
+					background-position: -200px 10px
+		&:nth-child(3) 
+			.advantage-item
+				.advantage-logo
+					background-position: -389px 10px
+		&:nth-child(4) 
+			.advantage-item
+				.advantage-logo
+					background-position: -575px 10px
 
 .about-us
 	padding-top: 15px
@@ -278,43 +289,43 @@ header
 			-o-transform: skew(20deg)
 			background-color: $accent
 			z-index: -1
-	.services-items
-		padding: 10px
-		.services-item
-			height: 140px
-			padding: 0	6px
-			background-color: #e8e8e8
-			margin-bottom: 5px
-			padding-top: 10px
-			.services-logo
-				width: 55px
-				height: 55px
-				margin: auto
-				background-image: url(../img/sprite2.png)
-				background-repeat: no-repeat
-				background-position: 7px -65px
-			p 
-				text-align: center
-				margin: auto
-				margin-top: 10px
-				line-height: 17px
-		.col
-			&:nth-child(2) 
-				.services-item
-					.services-logo
-						background-position: -145px -65px
-			&:nth-child(3) 
-				.services-item
-					.services-logo
-						background-position: -293px -65px
-			&:nth-child(4) 
-				.services-item
-					.services-logo
-						background-position: -446px -65px
-			&:nth-child(5) 
-				.services-item
-					.services-logo
-						background-position: -595px -65px
+.services-items
+	padding: 10px
+	.services-item
+		height: 140px
+		padding: 0	6px
+		background-color: #e8e8e8
+		margin-bottom: 5px
+		padding-top: 10px
+		.services-logo
+			width: 55px
+			height: 55px
+			margin: auto
+			background-image: url(../img/sprite2.png)
+			background-repeat: no-repeat
+			background-position: 7px -65px
+		p 
+			text-align: center
+			margin: auto
+			margin-top: 10px
+			line-height: 17px
+	.col
+		&:nth-child(2) 
+			.services-item
+				.services-logo
+					background-position: -145px -65px
+		&:nth-child(3) 
+			.services-item
+				.services-logo
+					background-position: -293px -65px
+		&:nth-child(4) 
+			.services-item
+				.services-logo
+					background-position: -446px -65px
+		&:nth-child(5) 
+			.services-item
+				.services-logo
+					background-position: -595px -65px
 	.services-content
 		padding: 10px
 		p 
@@ -431,86 +442,88 @@ footer
 		background-position: center center
 		background-size: cover
 		background-repeat: no-repeat
-		.contacts
-			padding: 10px 0 20px
-			background-color: rgba(0,0,0, .5)
-			color: #fff
-			min-height: 125px
-			line-height: 2.5
-			p 
-				font-family: robotoslab
-				color: $accent
-				font-size: 14px
-				text-align: center
-				margin: 0
-				display: none
-			img
-				position: absolute
-				bottom: 0
-				top: 0
-				right: 0
-				margin: auto
-			.contacts-item
-				margin-left: 15px
-				position: relative
-				padding-left: 25px
-				&:before
-					content: ""
-					position: absolute
-					width: 20px
-					height: 40px
-					background-image: url(../img/sprite.png)
-					background-repeat: no-repeat
-					background-position: 0 -20px
-					left: 0
-			.barnaul, .peterburg
-				&:before
-					background-position: 0 -49px
-	.footer-copyright
-		background-color: $active
-		p	
-			padding-left: 10px
-			font-size: 12px
+.contacts
+	padding: 10px 0 20px
+	background-color: rgba(0,0,0, .5)
+	color: #fff
+	min-height: 125px
+	line-height: 2.5
+	p 
+		font-family: robotoslab
+		color: $accent
+		font-size: 14px
+		text-align: center
+		margin: 0
+		display: none
+	img
+		position: absolute
+		bottom: 0
+		top: 0
+		right: 0
+		margin: auto
+	.contacts-item
+		margin-left: 15px
+		position: relative
+		padding-left: 25px
+		&:before
+			content: ""
+			position: absolute
+			width: 20px
+			height: 40px
+			background-image: url(../img/sprite.png)
+			background-repeat: no-repeat
+			background-position: 0 -20px
+			left: 0
+	.barnaul, .peterburg
+		&:before
+			background-position: 0 -49px
+.footer-copyright
+	background-color: $active
+	p	
+		padding-left: 10px
+		font-size: 12px
+		font-style: italic
+		color: #fff
+		border-bottom: 1px solid #c55b2c
+		line-height: 25px
+		margin: 0
+	.aestudio
+		color: #fff
+		padding-left: 10px
+		line-height: 30px
+		a
 			font-style: italic
 			color: #fff
-			border-bottom: 1px solid #c55b2c
-			line-height: 25px
-			margin: 0
-		.aestudio
-			color: #fff
-			padding-left: 10px
-			line-height: 30px
-			a
-				font-style: italic
-				color: #fff
-			span
-				text-decoration: underline
-		img
-				margin-left: 5px
-	.full
-		background-color: #000
-		line-height: 40px
-		text-decoration: underline
-		padding-left: 10px
-		color: #fff
-		a
-			display: inline-block
-			padding-left: 33px
+		span
 			text-decoration: underline
-			color: #fff
-			position: relative
-			&:before
-				content: ""
-				width: 23px
-				height: 20px
-				background-image: url(../img/full-icon.png)
-				position: absolute
-				left: 0
-				top: 0
-				bottom: 0
-				margin: auto
+	img
+			margin-left: 5px
+.full
+	background-color: #000
+	line-height: 40px
+	text-decoration: underline
+	padding-left: 10px
+	color: #fff
+	a
+		display: inline-block
+		padding-left: 33px
+		text-decoration: underline
+		color: #fff
+		position: relative
+		&:before
+			content: ""
+			width: 23px
+			height: 20px
+			background-image: url(../img/full-icon.png)
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			margin: auto
 
 .page 
+	h2 
+		padding-bottom: 15px
 	header nav 
 		position: relative
 		text-align: right
@@ -570,6 +583,16 @@ footer
 			justify-content: center
 			li 
 				margin-right: 5px
+				&:first-child
+					margin-right: 5rem
+					a
+						color: #fff
+						background-color: #666666
+				&:last-child
+					margin-left: 5rem
+					a
+						color: #fff
+						background-color: #666666
 			a 
 				color: #000
 				border-radius: 50%
@@ -578,6 +601,150 @@ footer
 				border: none
 			.active-page
 				background-color: #fcc188
+			
 	h2
 		margin: 0
+	video 
+		width: 100%
+		margin: 15px 0
+	.news
+		.date	
+			font-family: robotoSlab
+			color: #78a1b1
+		h2
+			margin: 10px 0
+		img 
+			max-width: 370px
+			float: left
+			margin-right: 20px
+			margin-top: 6px
+			display: flex
+	.catalog-item-content
+		margin-left: 10px
+		text-align: justify
+		a 
+			padding: .35rem 1.25rem
+	.item-price
+		height: 35px
+	.services-catalog-item
+		.row
+			border-bottom: 1px solid #e5e5e5
+			padding-bottom: 5px
+			padding-top: 10px
+			&:last-child
+				border: none
+	.contacts-form
+		background-color: #e8e8e8
+		form 
+			
+			input
+				border: none
+				width: 100%
+				height: 30px
+				padding-left: 10px
+				&:focus
+					border: 1px solid $accent
+					box-shadow: 2px 2px 3px rgba(0,0,0,.2)
+			padding: 0	10px 15px
+			p
+				font-size: 12px
+				font-family: arial
+				margin: 5px 0 3px
+				color: #797979
+			textarea
+				resize: none
+				width: 100%
+				max-height: 370px
+				border: none
+				height: 100%
+				padding: 5px
+			.contacts-form-right
+				height: 100%
+				padding-bottom: 27px
+				padding-left: 5px
+			.contacts-form-left
+				padding-right: 5px
+			.agree
+				border-top: 1px solid #797979
+				margin-top: 20px
+				padding-top: 10px
+			.button
+				margin: 10px auto 5px
+				display: block
+				width: 300px
+				text-align: center
+		h2
+			display: block
+			background-color: $accent
+			color: #fff
+			text-transform: none
+			font-size: 20px
+			padding: 5px 15px
+	.services-content
+		.contacts
+			background-color: #fff
+			color: #000	
+			font-family: arial
+			line-height: 1.6
+			.contacts-item
+				margin: 0
+				margin-bottom: 10px
+				
+				&:before
+					background-position: 0 -26px
+					left: 0
+					height: 30px
+			
+				span
+					color: $accent
+					font-family: arial
+
+				p
+					line-height: 1.6
+					text-align: left
+					font-family: arial
+					color: #000	
+					display: block
+			.barnaul, .peterburg
+				&:before
+					background-position: 0 -56px
+			.contacts-logo
+				p
+					display: block
+					text-align: left
+			.contacts-item.mail
+				a 
+					display: block
+					text-decoration: underline
+					&:hover
+						color: $accent
+				&:before
+					background-image: url(../img/mail-logo.png)
+					background-position: 2px 5px
+			.contacts-logo
+				padding: 10px 0
+				padding-left: 70px
+				background-color: #e8e8e8
+				p
+					color: #000
+					font-family: robotoslab
+					font-size: 18px
+					position: relative
+					max-width: 200px
+					margin: auto
+					span
+						font-family: arial
+						font-size: 14px
+					&:before
+						content: ""
+						width: 52px
+						height: 40px
+						background-image: url(../img/contacts-logo.png)
+						background-repeat: no-repeat
+						position: absolute
+						left: -70px
+						top: 0
+						bottom: 0
+						margin: auto
+
 @import "media" // Always at the end
