@@ -197,23 +197,25 @@ header
 					
 	.header-content
 		position: relative
-	.fotorama 
+	.fotorama
 		position: relative
-		img 
-			height: 100%
+		.fotorama__img
 			width: 100%
+
 		.fotorama__nav-wrap
 			position: absolute
 			bottom: 0
 			right: 0
-			padding: 10px
 			z-index: 20
+			padding: 10px
+			width: 100%
 			background-color: rgba(0,0,0, .5)
 			.fotorama__thumb-border
 				border-color: rgba(249,132,18, .4)
 				background-color: rgba(249,132,18, .4)
 		.fotorama__wrap--css3 .fotorama__nav__shaft, .fotorama__wrap--css3 .fotorama__stage__shaft, .fotorama__wrap--css3 .fotorama__thumb-border
 			float: right
+
 
 	.fotorama-bottom
 		position: absolute
@@ -582,7 +584,8 @@ footer
 		.pagination
 			justify-content: center
 			li 
-				margin-right: 5px
+				margin: 0 5px
+				display: inline-block
 				&:first-child
 					margin-right: 5rem
 					a
@@ -593,14 +596,20 @@ footer
 					a
 						color: #fff
 						background-color: #666666
-			a 
-				color: #000
-				border-radius: 50%
-				padding: .15rem .40rem
-				background-color: #c5e0eb
-				border: none
-			.active-page
-				background-color: #fcc188
+				a 
+					color: #000
+					background-color: #c5e0eb
+					border: none
+					width: 25px
+					height: 25px
+					display: inline-block
+					line-height: 25px
+					padding: 0
+					text-align: center
+					border-radius: 50%
+
+				.active-page
+					background-color: #fcc188
 			
 	h2
 		margin: 0

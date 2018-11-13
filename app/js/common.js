@@ -15,6 +15,10 @@ $(function() {
 		}
 	});
 
+	$('[data-fancybox="gallery"]').fancybox({
+		hideScrollbar: false
+	});
+
 	$("#phone").mask("+7(999) 999-9999");
 	
 });
